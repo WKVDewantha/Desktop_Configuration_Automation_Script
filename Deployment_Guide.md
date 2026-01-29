@@ -1,14 +1,7 @@
 # Desktop Configuration Automation Guide
 
 ## Overview
-This guide provides step-by-step instructions for deploying the automated configuration script across your HP ProDesk 280 G9 desktop computers.
-
-## System Requirements
-- **Model**: HP ProDesk 280 G9 Desktop PC
-- **Storage**: 800GB or more (typically 1TB HDD)
-- **RAM**: 16GB DDR4
-- **Processor**: Intel Core i7 14th Gen
-- **OS**: Windows 11 Pro
+This guide provides step-by-step instructions for deploying the automated configuration script across your company's desktop computers.
 
 ## What the Script Does
 1. **Creates a 250GB partition** - Only on systems with 800GB+ storage capacity. Automatically shrinks the C: drive if needed and creates a new 250GB data partition
