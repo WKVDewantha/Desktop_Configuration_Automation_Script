@@ -7,7 +7,7 @@ This guide provides step-by-step instructions for deploying the automated config
 1. **Creates a 250GB partition** - Only on systems with 800GB+ storage capacity. Automatically shrinks the C: drive if needed and creates a new 250GB data partition
 2. **Configures static IP address** - Checks if a static IP in the 192.168.130.X range already exists. If found, prompts user to confirm if they want to change it (Y/N). If user selects 'Y' or no IP is configured, prompts for IP address (192.168.130.X format) and configures both IPv4 and IPv6 network settings. **Done EARLY to avoid security context errors**
 3. **Sets timezone to Sri Lanka** - Configures system timezone to Sri Lanka Standard Time (UTC+05:30) for Sri Jayawardenepura Kotte
-4. **Backs up files** - **Prompts user** if they want to copy files (Y/N). If files already exist in the destination, asks if they should be overwritten (Y/N). Uses Windows **robocopy** tool with **visual progress display** showing file names, transfer speed, and estimated time remaining to reliably copy **all files from the parent directory** (including large files) to the newly created partition in a "setup" folder. For example, if the script is located at `E:\Software\HP_Desktop_Configuration\HP_Desktop_Configuration.ps1`, it will copy everything from `E:\Software\` to the backup location. **Note: Log files are NOT backed up, only source files**. Robocopy handles large files, network interruptions, and provides reliable multi-threaded copying.
+4. **Backs up files** - **Prompts user** if they want to copy files (Y/N). If files already exist in the destination, asks if they should be overwritten (Y/N). Uses Windows **robocopy** tool with **visual progress display** showing file names, transfer speed, and estimated time remaining to reliably copy **all files from the parent directory** (including large files) to the newly created partition in a "setup" folder. For example, if the script is located at `E:\Software\Desktop_Configuration_Automation_Script\Desktop_Configuration.ps1`, it will copy everything from `E:\Software\` to the backup location. **Note: Log files are NOT backed up, only source files**. Robocopy handles large files, network interruptions, and provides reliable multi-threaded copying.
 5. **Renames local administrator account** - Searches for "HP" account (common on HP computers) and renames it to "Admin". If "Admin" account already exists, skips renaming. If "HP" account not found, renames the built-in Administrator account instead. **Done LAST to avoid permission issues**
 6. **Sets Admin account password** - Sets the password for the "Admin" account to "12345" for standardization across all systems
 7. **Tests network connectivity** - Verifies gateway, DNS, and internet connectivity after configuration
@@ -28,7 +28,7 @@ The script provides **interactive file backup** to the newly created partition u
   - Answer 'Y' to overwrite all existing files
   - Answer 'N' to skip files that already exist
 - **Source**: Parent directory of the script location
-  - Example: Script at `E:\Software\HP_Desktop_Configuration\script.ps1`
+  - Example: Script at `E:\Software\Desktop_Configuration_Automation_Script\script.ps1`
   - Copies from: `E:\Software\` (entire folder with all subfolders)
 - **Destination**: `D:\setup\` or `E:\setup\` (on the newly created 250GB partition)
 - **Copy Method**: robocopy (Windows built-in tool)
