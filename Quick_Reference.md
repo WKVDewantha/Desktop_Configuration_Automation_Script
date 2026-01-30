@@ -3,12 +3,12 @@
 ## Basic Deployment (Single PC)
 
 1. **Copy files to USB drive**
-   - HP_Desktop_Configuration.ps1
-   - Run_HP_Configuration.bat
+   - Desktop_Configuration.ps1
+   - Run_Configuration.bat
 
 2. **On target computer**:
    - Insert USB drive
-   - Right-click `Run_HP_Configuration.bat`
+   - Right-click `Run_Configuration.bat`
    - Select **"Run as Administrator"**
    - **If IP already configured**: Answer Y/N to change prompt
    - **Enter IP address when prompted** (e.g., 05, 10, 12, 100)
