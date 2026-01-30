@@ -533,32 +533,6 @@ Optimize-Volume -DriveLetter C -Defrag -Verbose
 powercfg /h on
 ```
 
----
-
-## Mass Deployment Workflow
-
-For deploying to all computers efficiently:
-
-1. **Preparation Phase** (Day 1)
-   - Test script on 2-3 pilot computers
-   - Document any issues
-   - Adjust script if needed
-
-2. **Staged Deployment** (Days 2-3)
-   - Deploy to 10% of computers
-   - Monitor for issues
-   - Collect logs for review
-
-3. **Full Deployment** (Days 4-5)
-   - Deploy to remaining computers
-   - Use parallel deployment for efficiency
-
-4. **Verification Phase** (Day 6)
-   - Run verification scripts on all computers
-   - Generate compliance report
-
----
-
 ## Creating a Verification Report
 
 Run this script to verify all computers are configured correctly:
