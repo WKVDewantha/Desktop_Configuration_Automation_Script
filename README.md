@@ -13,12 +13,6 @@ This guide provides step-by-step instructions for deploying the automated config
 7. **Tests network connectivity** - Verifies gateway, DNS, and internet connectivity after configuration
 8. **Logs all activities** - Creates detailed logs in C:\Logs for troubleshooting (logs remain in C:\Logs only)
 
-## Important: Script Execution Order
-The script follows a specific order to prevent errors:
-1. **Network configuration BEFORE admin changes** - Prevents security context errors
-2. **File backup BEFORE admin changes** - Ensures file operations complete successfully
-3. **Admin account changes LAST** - Minimizes potential permission conflicts
-
 ## Backup Behavior Details
 The script provides **interactive file backup** to the newly created partition using **Windows robocopy**:
 - **User Confirmation**: Prompts "Do you want to copy files to the backup location? (Y/N)"
